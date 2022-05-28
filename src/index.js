@@ -21,7 +21,7 @@ const renderCountryList = (countriesList) => {
             `<li class = "country-item">
             <span>
             <img class = "country-flag" src = "${flags.svg}" 
-            alt = "Flag of ${name.official}" width = "40"/>
+            alt = "Flag of ${name.official}" width = "50"/>
             ${name.official}
             </span>
             </li>`)
@@ -37,11 +37,11 @@ const renderCountryCard = (countryCard) => {
             `<div class = "country-card">
             <h1>
             <img class = "country-flag" src = "${flags.svg}"
-            alt = "Flag of ${name.official}" width = "40"/>${name.official}
+            alt = "Flag of ${name.official}" width = "50"/>${name.official}
             </h1>
-            <p><span>Capital: </span>${capital}</p>
-            <p><span>Population: </span>${population}</p>
-            <p><span>Languages: </span>${Object.values(languages).join(", ")}</p>
+            <p><span class = "country-data">Capital: </span>${capital}</p>
+            <p><span class = "country-data">Population: </span>${population}</p>
+            <p><span class = "country-data">Languages: </span>${Object.values(languages).join(", ")}</p>
             </div>`)
         .join("");
     countryInfo.insertAdjacentHTML("beforeend", markup);
